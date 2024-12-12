@@ -1,0 +1,12 @@
+@import './base.css';
+
+@layer components {
+  .draggable {
+    -webkit-user-select: none;
+    -webkit-app-region: drag;
+  }
+  .not-draggable {
+    -webkit-user-select: auto;
+    -webkit-app-region: none;
+  }
+}
