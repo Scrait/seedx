@@ -1,10 +1,16 @@
 import { contextBridge, ipcRenderer } from 'electron'
 import { electronAPI } from '@electron-toolkit/preload'
+import { machineIdSync } from 'node-machine-id'
+import crypto from 'crypto'
 
 // Custom APIs for renderer
 const api = {
   minimizeWindow: () => ipcRenderer.send('window-minimize'),
-  closeWindow: () => ipcRenderer.send('window-close')
+  closeWindow: () => ipcRenderer.send('window-close'),
+  getHWID: async () => {
+    const hwid = machineIdSync(true)
+    return crypto.createHash('sha256').update(hwid).digest('hex')
+  }
 }
 
 // Use `contextBridge` APIs to expose Electron APIs to

@@ -12,6 +12,7 @@ function createWindow() {
     autoHideMenuBar: true,
     frame: false,
     resizable: false,
+    fullscreen: false,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
@@ -29,12 +30,12 @@ function createWindow() {
   })
 
   ipcMain.on('window-minimize', () => {
-    mainWindow.minimize(); // Минимизируем окно
-  });
+    mainWindow.minimize()
+  })
 
   ipcMain.on('window-close', () => {
-    mainWindow.close(); // Закрываем окно
-  });
+    mainWindow.close()
+  })
 
   // HMR for renderer base on electron-vite cli.
   // Load the remote URL for development or the local html file for production.
