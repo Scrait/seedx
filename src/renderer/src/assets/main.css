@@ -5,8 +5,32 @@
     -webkit-user-select: none;
     -webkit-app-region: drag;
   }
+
   .not-draggable {
     -webkit-user-select: auto;
     -webkit-app-region: none;
+  }
+  
+  .custom-scrollbar {
+    scrollbar-width: thin; /* Для Firefox */
+    scrollbar-color: #34d399 #1e293b; /* Цвет прокрутки и фона для Firefox */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #1e293b; /* Цвет фона трека */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #34d399, #3b82f6); /* Градиент прокрутки */
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #10b981, #2563eb); /* При наведении */
   }
 }

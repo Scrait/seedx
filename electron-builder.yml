@@ -1,5 +1,5 @@
-appId: com.electron.app
-productName: seedx-electron-app
+appId: ru.scrait.app
+productName: SeedX
 directories:
   buildResources: build
 files:
@@ -11,7 +11,7 @@ files:
 asarUnpack:
   - resources/**
 win:
-  executableName: seedx-electron-app
+  executableName: SeedX
 nsis:
   artifactName: ${name}-${version}-setup.${ext}
   shortcutName: ${productName}

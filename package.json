@@ -18,12 +18,14 @@
     "build:linux": "npm run build && electron-builder --linux"
   },
   "dependencies": {
+    "@chenfengyuan/vue-qrcode": "^2.0.0",
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^3.0.0",
     "@vueuse/components": "^12.0.0",
     "@vueuse/core": "^12.0.0",
     "electron-updater": "^6.1.7",
     "node-machine-id": "^1.1.12",
+    "qrcode": "^1.5.4",
     "qrcode.vue": "^3.6.0"
   },
   "devDependencies": {

@@ -6,22 +6,29 @@ import icon from '../../resources/icon.png?asset'
 function createWindow() {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1000,
-    height: 600,
+    width: 950,
+    height: 470,
     show: false,
     autoHideMenuBar: true,
     frame: false,
     resizable: false,
+    fullscreenable: false,
     fullscreen: false,
+    maximizable: false,
     ...(process.platform === 'linux' ? { icon } : {}),
     webPreferences: {
       preload: join(__dirname, '../preload/index.js'),
-      sandbox: false
+      sandbox: false,
+      devTools: false
     }
   })
 
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
+  })
+
+  mainWindow.on('maximize', () => {
+    mainWindow.unmaximize()
   })
 
   mainWindow.webContents.setWindowOpenHandler((details) => {

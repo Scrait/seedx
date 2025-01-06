@@ -21,7 +21,7 @@ const fetchHWID = async () => {
 
 const copyHWID = () => {
   navigator.clipboard.writeText(hwid.value).then(() => {
-    alert('HWID скопирован!')
+    alert('HWID coppied!')
   })
 }
 

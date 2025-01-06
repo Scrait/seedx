@@ -9,7 +9,7 @@ const api = {
   closeWindow: () => ipcRenderer.send('window-close'),
   getHWID: async () => {
     const hwid = machineIdSync(true)
-    return crypto.createHash('sha256').update(hwid).digest('hex')
+    return crypto.createHash('md5').update(hwid).digest('hex')
   }
 }
 

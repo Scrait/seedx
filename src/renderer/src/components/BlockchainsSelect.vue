@@ -1,7 +1,3 @@
-<script setup>
-import Button from './Button.vue'
-</script>
-
 <template>
   <div class="w-full pt-6">
     <h2
@@ -9,18 +5,6 @@ import Button from './Button.vue'
     >
       Blockchains for search
     </h2>
-    <p class="font-bold text-slate-600">Only Bitcoin is available for the trial version</p>
-    <div class="grid grid-cols-5 py-4 gap-2">
-      <Button text="BTC" />
-      <Button text="BNB" />
-      <Button text="SOL" />
-      <Button text="AVAX" />
-      <Button text="OP" />
-      <Button text="ETH" />
-      <Button text="TRON" />
-      <Button text="LTC" />
-      <Button text="POLYGON" />
-      <Button text="DOGE" />
-    </div>
+    <p class="font-bold text-slate-600">Only Tron is available for the trial version</p>
   </div>
 </template>
